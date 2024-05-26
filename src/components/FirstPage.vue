@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import ButtonClick from './ButtonClick.vue';
-// import FrequentlyAsked from './FrequentlyAsked.vue';
-// import StartApply from './StartApply.vue';
 
 const requirements = ref([
   'Beginner-level Python skills',
@@ -15,8 +13,23 @@ const requirements = ref([
 <template>
   <main>
     <header>
+      <div aria-labelledby="header-tags">
+        <ul>
+          <li><a href="">News</a></li>
+          <li><a href="">Partnerships</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </div>
       <nav>
         <img src="/logo.svg" alt="logo" />
+        <ul>
+          <li><a href="">Our Programs</a></li>
+          <li><a href="">Our World</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Apply</a></li>
+          
+        </ul>
+      
       </nav>
     </header>
     
@@ -60,10 +73,32 @@ nav {
   align-items: center;
 }
 
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+}
+
+nav div[aria-labelledby="header-tags"] {
+  display: flex;
+  align-items: flex-start; 
+  flex-direction:row;
+}
+
+nav div[aria-labelledby="header-tags"] ul {
+  margin-top: 10px; 
+}
+nav div[aria-labelledby="header-tags"] ul li a{
+  color: #120f37;
+  text-decoration: none;
+}
+
 nav img {
   margin-top: -15px;
   width: 220px;
 }
+
 
 figure {
   width: 103.2%;
@@ -267,3 +302,4 @@ h2 {
   }
 }
 </style>
+<!-- I will come back and work on the nav tomorrow -->

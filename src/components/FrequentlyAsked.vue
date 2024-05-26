@@ -58,6 +58,7 @@ h2 {
 .faq-list {
   list-style-type: none;
   padding: 0;
+ 
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -88,6 +89,18 @@ h2 {
   width: 15%;
   margin-top: 9%;
   margin-bottom: 4%;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+ 
+}
+.button:hover{
+  background-color: #4f3b60;
+  color: #4f3b80;
+  border: 2px solid #4f3b80;
 }
 
 .faq-link {
@@ -152,6 +165,18 @@ h2 {
   flex-direction: column;
 
 }
+.faq-list {
+  list-style-type: none;
+  padding: 0;
+ width:85%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align:left ;
+
+}
+
     }
 
 @media screen and (max-width: 480px) {

@@ -1,9 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const toTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+
 
 const footerSections = ref([
   {
@@ -11,22 +9,22 @@ const footerSections = ref([
     alt: 'logo design',
     content: `
       WorldQuant University is a leader in global education, delivering entirely free online offerings that expand access to studies and credentials in the data sciences.
-    `
+    `,
   },
   {
     title: 'MScFE Program',
     links: [
       { text: 'Program Details', href: '#' },
       { text: 'MScFE Application', href: '#' },
-      { text: 'Catalog', href: '#' }
-    ]
+      { text: 'Catalog', href: '#' },
+    ],
   },
   {
     title: 'Applied Data Science Lab',
     links: [
       { text: 'Lab Details', href: '#' },
-      { text: 'Lab Application', href: '#' }
-    ]
+      { text: 'Lab Application', href: '#' },
+    ],
   },
   {
     title: 'About',
@@ -37,44 +35,48 @@ const footerSections = ref([
       { text: 'About WQU', href: '#' },
       { text: 'News', href: '#' },
       { text: 'Press', href: '#' },
-      { text: 'Contact', href: '#' }
-    ]
+      { text: 'Contact', href: '#' },
+    ],
   },
   {
     title: 'Portals',
     links: [
       { text: 'Student Login', href: '#' },
-      { text: 'Alumni Login', href: '#' }
-    ]
-  }
+      { text: 'Alumni Login', href: '#' },
+    ],
+  },
 ]);
 </script>
 
 <template>
   <footer>
-    <section v-for="(section, index) in footerSections" :key="index" :class="['footer-section', { 'first-section': index === 0 }]">
+    <section
+      v-for="(section, index) in footerSections"
+      :key="index"
+      :class="['footer-section', { 'first-section': index === 0 }]"
+    >
       <div v-if="section.logoSrc">
         <img :src="section.logoSrc" :alt="section.alt" class="footer-logo" />
         <p v-html="section.content" class="content"></p>
         <nav class="social-links">
           <ul>
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com" target="_blank">
                 <img src="/Facebook.svg" alt="Facebook" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.twitter.com" target="_blank">
                 <img src="/Twitter.svg" alt="Twitter" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com" target="_blank">
                 <img src="/LinkedIn.svg" alt="LinkedIn" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://github.com/Pokah1/" target="_blank">
                 <img src="/Github.svg" alt="Github" />
               </a>
             </li>
@@ -93,12 +95,7 @@ const footerSections = ref([
       </div>
     </section>
     <div class="footer-bottom">
-      <div class="to-top">
-        <button @click="toTop">
-          <img src="/up-arrow.jpg" alt="to-top" />
-          <span class="tooltip-text">Scroll to top</span>
-        </button>
-      </div>
+      
       <div class="copyright">
         <p>&copy; 2017-2024 WorldQuant University.</p>
       </div>
@@ -123,9 +120,10 @@ const footerSections = ref([
 </template>
 
 <style scoped>
+
 footer {
   background-color: #120f37;
-  padding: 20px;
+  padding: 40px 20px 20px 20px ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -219,45 +217,6 @@ footer {
   margin-top: 30px;
 }
 
-.to-top {
-  position: relative;
-}
-
-.to-top button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.to-top img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 100px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  bottom: -30px;
-  left: 80%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.8rem;
-  z-index: 1;
-}
-
-.to-top button:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
 .footer-links {
   display: flex;
   margin-top: 20px;
@@ -286,11 +245,12 @@ footer {
 }
 
 .copyright {
-  text-align: center;
-  font-size: 0.9rem;
+  text-align: left;
+  font-size: 1rem;
   color: #fff;
   font-weight: 300;
-  margin-left: -37%;
+  margin-left: 53px;
+  margin-top: 30px;
 }
 
 @media (max-width: 768px) {
@@ -342,4 +302,8 @@ footer {
     text-decoration: underline;
   }
 }
+
+/* Add more media queries as needed */
+
+
 </style>
