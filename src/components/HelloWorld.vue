@@ -16,7 +16,7 @@ const requirements = ref([
   <main>
     <header>
       <nav>
-        <img src="/src/assets/logo.svg" alt="logo" />
+        <img src="/logo.svg" alt="logo" />
       </nav>
     </header>
     

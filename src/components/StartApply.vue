@@ -12,6 +12,7 @@ const imgSrc = ref("/motion picture4.jpg");
       <div class="apply">{{ apply }}</div>
       <div class="apply-here">Start Application</div>
     </aside>
+   
   </div>
 </template>
 

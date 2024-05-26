@@ -7,16 +7,16 @@ const toTop = () => {
 
 const footerSections = ref([
   {
-    logoSrc: '/src/assets/logo.svg',
+    logoSrc: '/logo.svg',
     alt: 'logo design',
     content: `
       WorldQuant University is a leader in global education, delivering entirely free online offerings that expand access to studies and credentials in the data sciences.
     `,
     socialLinks: [
-      { href: '#', src: '/src/assets/Facebook.svg', alt: 'Facebook' },
-      { href: '#', src: '/src/assets/Twitter.svg', alt: 'Twitter' },
-      { href: '#', src: '/src/assets/Linkedin.svg', alt: 'LinkedIn' },
-      { href: '#', src: '/src/assets/Github.svg', alt: 'Github' }
+      { href: '#', src: '/Facebook.svg', alt: 'Facebook' },
+      { href: '#', src: '/Twitter.svg', alt: 'Twitter' },
+      { href: '#', src: '/LinkedIn.svg', alt: 'LinkedIn' },
+      { href: '#', src: '/Github.svg', alt: 'Github' }
     ]
   },
   {
