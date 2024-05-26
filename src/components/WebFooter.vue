@@ -11,13 +11,7 @@ const footerSections = ref([
     alt: 'logo design',
     content: `
       WorldQuant University is a leader in global education, delivering entirely free online offerings that expand access to studies and credentials in the data sciences.
-    `,
-    socialLinks: [
-      { href: '#', src: '/Facebook.svg', alt: 'Facebook' },
-      { href: '#', src: '/Twitter.svg', alt: 'Twitter' },
-      { href: '#', src: '/LinkedIn.svg', alt: 'LinkedIn' },
-      { href: '#', src: '/Github.svg', alt: 'Github' }
-    ]
+    `
   },
   {
     title: 'MScFE Program',
@@ -62,11 +56,26 @@ const footerSections = ref([
       <div v-if="section.logoSrc">
         <img :src="section.logoSrc" :alt="section.alt" class="footer-logo" />
         <p v-html="section.content" class="content"></p>
-        <nav v-if="section.socialLinks">
-          <ul class="social-links">
-            <li v-for="(link, index) in section.socialLinks" :key="index">
-              <a :href="link.href">
-                <img :src="link.src" :alt="link.alt" />
+        <nav class="social-links">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="/Facebook.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/Twitter.svg" alt="Twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/LinkedIn.svg" alt="LinkedIn" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/Github.svg" alt="Github" />
               </a>
             </li>
           </ul>
@@ -76,7 +85,7 @@ const footerSections = ref([
         <h2>{{ section.title }}</h2>
         <nav>
           <ul>
-            <li v-for="(link, index) in section.links" :key="index">
+            <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
               <a :href="link.href">{{ link.text }}</a>
             </li>
           </ul>
@@ -130,15 +139,13 @@ footer {
 .footer-section {
   flex: 1;
   min-width: 200px;
-  margin-left:20px; 
+  margin-left: 20px;
   padding: 10px;
-  /* margin: 30px; */
 }
 
 .first-section {
   flex: 2;
   max-width: 400px;
-  
 }
 
 .footer-section h2 {
@@ -181,7 +188,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.social-links {
+.social-links ul {
   display: flex;
   padding: 0;
 }
@@ -198,10 +205,10 @@ footer {
 .social-links li:last-child a {
   margin-right: 0;
 }
+
 .social-links li a img:hover {
   box-shadow: 0 0 10px 5px rgba(221, 192, 25, 0.5);
   transition: 0.5s;
-
 }
 
 .footer-bottom {
@@ -254,7 +261,6 @@ footer {
 .footer-links {
   display: flex;
   margin-top: 20px;
- 
 }
 
 .footer-links ul {
@@ -262,12 +268,10 @@ footer {
   padding: 0;
   display: flex;
   margin-right: 30px;
-  
 }
 
 .footer-links ul li {
   padding: 0 10px;
-
 }
 
 .footer-links ul li a {
@@ -279,7 +283,6 @@ footer {
   line-height: 5px;
   transition: 0.5s;
   font-weight: 300;
- 
 }
 
 .copyright {
@@ -289,6 +292,7 @@ footer {
   font-weight: 300;
   margin-left: -37%;
 }
+
 @media (max-width: 768px) {
   footer {
     flex-direction: column;
@@ -328,16 +332,14 @@ footer {
   .copyright {
     margin-left: 0;
   }
+
   .footer-section ul li a {
- 
-  font-size: 1rem;
+    font-size: 1rem;
+  }
 
+  .footer-section ul li a:hover {
+    color: #8a7919;
+    text-decoration: underline;
+  }
 }
-.footer-section ul li a:hover{
-  color: #8a7919;
-  text-decoration: underline;
-  
-}
-}
-
 </style>
