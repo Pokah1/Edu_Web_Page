@@ -1,13 +1,12 @@
 <script setup>
 import { ref } from "vue";
 
-const apply = ref("Ready to go?");
-const imgSrc = ref("/motion picture4.jpg");
+const apply = ref("Inspired to Apply?");
 </script>
 
 <template>
   <div class="container">
-    <img :src="imgSrc" alt="Description of image" loading="lazy" />
+    <img src="../assets/motion picture3.jpg" alt="Description of image" loading="lazy" />
     <aside class="apply-info">
       <div class="apply">{{ apply }}</div>
       <div class="apply-here">Start Application</div>
@@ -17,10 +16,10 @@ const imgSrc = ref("/motion picture4.jpg");
 
 <style scoped>
 .container {
+  font-family: 'PT Serif';
   position: relative;
   display: inline-block;
   margin-top: -20px;
-  
   width: 102.3%;
 }
 
@@ -34,9 +33,10 @@ img {
 .apply {
   font-size: 3rem;
   font-weight: 600;
-  text-align: center;
+  
   color: #fff;
-  margin-bottom: 20px;
+  margin: 90px 0 20px 80px;
+ 
 }
 
 .apply-here {
@@ -44,13 +44,17 @@ img {
   font-weight: 600;
   text-align: left;
   color: #fea65c;
-  margin: -25px 0 20px 5px;
+  margin: -25px 0 20px 85px;
   cursor: pointer;
-  text-decoration: underline;
+  width:fit-content
+  /* text-decoration: underline; */
 }
 .apply-here:hover {
-  color: #db6e1b;
+  color: #d4cbc3;
+  text-decoration: underline;
 }
+
+
 .apply-info {
   position: absolute;
   top: 17%;
@@ -117,6 +121,26 @@ img {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  img {
+    margin: -1px 1px 0 -10px;
+    max-width: 125%; 
+    height: auto;
+  }
+  .apply {
+    font-size: 1.5rem;
+    margin: -20px 0 15px 10px;
+    
+  }
+  .apply-here {
+    font-size: 1rem;
+    margin: -10px 0 5px 10px;
+  }
+}
 @media screen and (max-width: 480px) {
   .container {
     width: 100%;

@@ -1,4 +1,4 @@
-<!-- src/components/ButtonClick.vue -->
+src/components/ButtonClick.vue
 <template>
   <button class="button" @click="buttonClick">{{ buttonText }}</button>
 </template>

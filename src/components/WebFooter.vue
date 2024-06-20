@@ -5,7 +5,7 @@ import { ref } from 'vue';
 
 const footerSections = ref([
   {
-    logoSrc: '/logo.svg',
+    logoSrc: 'logo.svg',
     alt: 'logo design',
     content: `
       WorldQuant University is a leader in global education, delivering entirely free online offerings that expand access to studies and credentials in the data sciences.
@@ -62,22 +62,22 @@ const footerSections = ref([
           <ul>
             <li>
               <a href="https://www.facebook.com" target="_blank">
-                <img src="/Facebook.svg" alt="Facebook" />
+                <img src="../assets/Facebook.svg" alt="Facebook" />
               </a>
             </li>
             <li>
               <a href="https://www.twitter.com" target="_blank">
-                <img src="/Twitter.svg" alt="Twitter" />
+                <img src="../assets/Twitter.svg" alt="Twitter" />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com" target="_blank">
-                <img src="/LinkedIn.svg" alt="LinkedIn" />
+                <img src="../assets/LinkedIn.svg" alt="LinkedIn" />
               </a>
             </li>
             <li>
               <a href="https://github.com/Pokah1/" target="_blank">
-                <img src="/Github.svg" alt="Github" />
+                <img src="../assets/Github.svg" alt="Github" />
               </a>
             </li>
           </ul>
@@ -122,6 +122,7 @@ const footerSections = ref([
 <style scoped>
 
 footer {
+  
   background-color: #120f37;
   padding: 40px 20px 20px 20px ;
   display: flex;
@@ -149,6 +150,7 @@ footer {
 .footer-section h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  font-family: 'PT Serif';
 }
 
 .footer-section ul {
@@ -159,8 +161,10 @@ footer {
 .content {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  line-height: 1.5rem;
   font-weight: 300;
+  font-family: 'PT Serif';
+  letter-spacing: 0.5px;
+  line-height: 30px;
 }
 
 .footer-section ul li {
@@ -170,6 +174,7 @@ footer {
 .footer-section ul li a {
   text-decoration: underline;
   color: #eecc0dd0;
+
   display: inline-block;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -207,7 +212,9 @@ footer {
 .social-links li a img:hover {
   box-shadow: 0 0 10px 5px rgba(221, 192, 25, 0.5);
   transition: 0.5s;
+  border-radius: 50px;
 }
+
 
 .footer-bottom {
   display: flex;
@@ -303,7 +310,7 @@ footer {
   }
 }
 
-/* Add more media queries as needed */
+
 
 
 </style>

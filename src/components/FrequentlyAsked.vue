@@ -45,9 +45,9 @@ const questions = ref([
 }
 
 h2 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'PT Serif';
   color: #333;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: left;
   margin-top: 20px;
   padding: 20px;
@@ -66,8 +66,13 @@ h2 {
   text-align:left ;
 
 }
+strong{
+  font-family: 'PT Serif';
+  font-size: 1.2rem;
+}
 
 .faq-item {
+  
   background-color: white;
   padding: 20px;
   border: 1px solid #ccc;
@@ -76,7 +81,7 @@ h2 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
+  font-size: 1.05rem;
 }
 
 .button {
@@ -94,7 +99,8 @@ h2 {
 .button a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  
  
 }
 .button:hover{
